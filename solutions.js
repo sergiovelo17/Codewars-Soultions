@@ -70,3 +70,37 @@ function permuteAPalindrome (input) {
     return this.spells.length;
     }
     }
+
+    //get character count
+    function letterFrequency(text){
+        let obj = {};
+        for(let i = 0; i < text.length; i++){
+        if(text.charAt(i).match(/[a-zA-Z]/)){
+          if(text.charAt(i).toLowerCase() in obj){
+            obj[text.charAt(i).toLowerCase()]++;
+          }else{
+              obj[text.charAt(i).toLowerCase()] = 1;
+          }
+        }
+        }
+        let arr = [];
+        for(e in obj){
+        arr.push([e,obj[e]]);
+        }
+        arr.sort((a,b)=>{
+        if(a[1] > b[1]){
+        return -1;
+        }
+        if(a[1] < b[1]){
+        return 1
+        }
+        if(a[0] > b[0]){
+        return 1;
+        }
+        if(a[0] < b[0]){
+        return -1
+        }
+        return 0;
+        });
+        return arr;
+      }
