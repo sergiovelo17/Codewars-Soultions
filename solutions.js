@@ -79,7 +79,21 @@ function permuteAPalindrome (input) {
        return "" + s.charAt(Math.floor(s.length/2));
     }
 }
-
+    //sums digits of number
+    function sumDigits(number) {
+      let arr = ("" + number).split('');
+      let sum = 0;
+      let curr = 0;
+      for(let i = 0; i < arr.length; i++){
+        if(arr[i] == '-'){
+        i++;
+      }
+        curr += arr[i];
+        sum += Number(curr);
+        curr = "";
+      }
+      return sum;
+      }
     //get character count
     function letterFrequency(text){
         let obj = {};
@@ -112,4 +126,17 @@ function permuteAPalindrome (input) {
         return 0;
         });
         return arr;
+      }
+      //find winning number in lottery draw 
+      function lottery(str){
+        let s = "";
+        for(let i = 0; i < str.length; i++){
+          if(!s.includes(str.charAt(i)) && str.charAt(i).match((/[0-9]/))){
+            s+= str.charAt(i);
+          }
+        }
+        if(s == ""){
+          return "One more run!";
+        }
+         return s;
       }
