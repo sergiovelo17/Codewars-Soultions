@@ -140,3 +140,59 @@ function permuteAPalindrome (input) {
         }
          return s;
       }
+      //reverse sequence practice 
+      const reverseSeq = n => { 
+        let arr = [];
+        for(let i = n; i > 0; i--){
+        arr.push(i);
+        }
+        return arr;
+      };
+      //count number of divisors for any number
+      function getDivisorsCnt(n){
+        let i = 1;
+        let numOfDiv = 0;
+        while(i <=n){
+          if(n%i==0){
+          numOfDiv++;
+          }
+          i++;
+        }
+        return numOfDiv;
+    }
+    //function for pokemon attacks
+    function calculateDamage(yourType, opponentType, attack, defense){
+      let effective = 0;
+      if(yourType == "fire"){
+        if(opponentType == "fire" || opponentType == "water"){
+          effective = 0.5;
+        }else if(opponentType == "electric"){
+          effective = 1;
+        }else if(opponentType == "grass"){
+          effective = 2;
+        }
+      }else if(yourType == "water"){
+        if(opponentType == "grass" || opponentType == "water" || opponentType == "electric"){
+          effective = 0.5;
+        }else if(opponentType == "fire"){
+          effective = 2;
+        }
+      }else if(yourType == "grass"){
+        if(opponentType == "grass" || opponentType == "fire"){
+          effective = 0.5;
+        }else if(opponentType == "electric"){
+          effective = 1;
+        }else if(opponentType == "water"){
+          effective = 2;
+        }
+      }else if(yourType == "electric"){
+        if(opponentType == "electric"){
+          effective = 0.5;
+        }else if(opponentType == "fire"|| opponentType == "grass"){
+          effective = 1;
+        }else if(opponentType == "water"){
+          effective = 2;
+        }
+      }
+      return 50 * (attack/defense) * effective;
+    }
