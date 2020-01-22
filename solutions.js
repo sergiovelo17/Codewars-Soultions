@@ -196,3 +196,36 @@ function permuteAPalindrome (input) {
       }
       return 50 * (attack/defense) * effective;
     }
+    // parses data with keys to Return the output array, and ignore all non-op characters
+function parse( data )
+{
+  let arr = data.split("");
+  let num = 0;
+  let finished = [];
+  for(let i = 0; i < arr.length; i++){
+  if(arr[i] == 'i'){
+  num++;
+  }else if(arr[i] == 'd'){
+  num--;
+  }else if(arr[i] == 's'){
+  num*=num;
+  }else if(arr[i]=='o'){
+  finished.push(num);
+  }
+  }
+  return finished;
+}
+//gradebook - easy 
+function getGrade (s1, s2, s3) {
+  let avg = (s1+s2+s3)/3;
+  if(avg>= 90){
+    return 'A';
+  }else if(avg>=80){
+    return 'B';
+  }else if(avg>=70){
+    return 'C';
+  }else if(avg>=60){
+    return 'D'
+  }
+  return 'F';
+ }
