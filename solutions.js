@@ -229,3 +229,38 @@ function getGrade (s1, s2, s3) {
   }
   return 'F';
  }
+ //figure out if sum of array is odd/even
+ function oddOrEven(array) {
+  if(array == []|| array == [0]){
+    return "even";
+  }
+  let val = array.reduce((a,b)=>{
+    return a + b;
+  },0)
+  if(val%2 == 0){
+       return "even";
+  }
+  return "odd";
+}
+//find population infected by disease given a map
+function infected(s) {
+  let safe = 0;
+  let infected = 0;
+    let arr = s.split('X');
+    arr.forEach((e)=>{
+    if(e.includes('1')){
+      infected += e.length;
+    }else if(e != ''){
+      safe += e.length;
+    }
+    })
+    if(infected == 0){
+    return 0;
+    }
+    return 100 * (infected/(infected+safe));
+  }
+  //find DNA compliment (shorthand two lines)
+  function DNAStrand(dna){
+    let comp = {'A':'T','T':'A','C':'G','G':'C'}
+    return dna.split('').map((e,i)=>{return comp[dna[i]]}).join('');
+   }
