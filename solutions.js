@@ -264,3 +264,23 @@ function infected(s) {
     let comp = {'A':'T','T':'A','C':'G','G':'C'}
     return dna.split('').map((e,i)=>{return comp[dna[i]]}).join('');
    }
+   //find content of an odd triangle given the row number 
+   function oddRow(n) {
+    let val =n * (n-1) +1;
+    let arr = [];
+    for(let i = 0; i < n; i++){
+    arr.push(val);
+    val+=2;
+    }
+    return arr;
+  }
+//check if number is tidy (in non-decreasing order)
+function tidyNumber(n){
+  let arr = ("" + n).split('');
+  for(let i = 0; i < arr.length; i++){
+    if(i != arr.length-1 && arr[i] > arr[i+1]){
+      return false;
+    }
+  }
+  return true;
+}
