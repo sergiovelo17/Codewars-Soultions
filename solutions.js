@@ -284,3 +284,25 @@ function tidyNumber(n){
   }
   return true;
 }
+//check if number is disarium
+function disariumNumber(n){
+  let arr = (""+n).split('');
+  let num = 0;
+  arr.forEach((e,i)=>{
+  num += Math.pow(Number(e),(i+1));
+  });
+  if(num == n){
+  return "Disarium !!";
+  }
+  return "Not !!";
+}
+//check if number is automorphic
+function automorphic(n){
+  let s = "" + n;
+  n = n*n;
+  let r = "" + n;
+  if(r.slice(r.length-s.length,n.length) == s){
+    return "Automorphic"
+  }
+  return "Not!!"
+}
