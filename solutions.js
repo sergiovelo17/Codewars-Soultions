@@ -305,4 +305,20 @@ function automorphic(n){
     return "Automorphic"
   }
   return "Not!!"
+
+}
+//find smallest number possible with list of numbers given (non-repeating)
+function minValue(values){
+  values = values.sort();
+  let obj = {};
+  let val = "";
+  values.forEach((e)=>{
+  if(e in obj){
+   
+  }else{
+   val += "" + e;
+    obj[e] = true;
+  }
+  })
+  return Number(val);
 }
