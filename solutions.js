@@ -196,6 +196,7 @@ function permuteAPalindrome (input) {
       }
       return 50 * (attack/defense) * effective;
     }
+    
     // parses data with keys to Return the output array, and ignore all non-op characters
 function parse( data )
 {
