@@ -196,7 +196,7 @@ function permuteAPalindrome (input) {
       }
       return 50 * (attack/defense) * effective;
     }
-    
+
     // parses data with keys to Return the output array, and ignore all non-op characters
 function parse( data )
 {
@@ -322,4 +322,18 @@ function minValue(values){
   }
   })
   return Number(val);
+}
+//find out if a number is a "Jumping Number"
+function jumpingNumber(n){
+  if(n<10 && n>0){
+    return "Jumping!!";
+  }
+  let s = "" + n;
+  for(let i = 0; i < s.length-1; i++){
+    if(Number(s.charAt(i)) ==( Number(s.charAt(i+1))-1) || Number(s.charAt(i)) ==( Number(s.charAt(i+1))+1)){   
+    }else{
+      return "Not!!";
+    }
+  }
+  return "Jumping!!";
 }
