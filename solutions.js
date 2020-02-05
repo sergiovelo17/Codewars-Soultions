@@ -307,6 +307,7 @@ function automorphic(n){
   }
   return "Not!!"
 
+  
 }
 //find smallest number possible with list of numbers given (non-repeating)
 function minValue(values){
@@ -323,6 +324,8 @@ function minValue(values){
   })
   return Number(val);
 }
+
+
 //find out if a number is a "Jumping Number"
 function jumpingNumber(n){
   if(n<10 && n>0){
