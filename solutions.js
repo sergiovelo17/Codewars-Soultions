@@ -307,7 +307,7 @@ function automorphic(n){
   }
   return "Not!!"
 
-  
+
 }
 //find smallest number possible with list of numbers given (non-repeating)
 function minValue(values){
@@ -339,4 +339,21 @@ function jumpingNumber(n){
     }
   }
   return "Jumping!!";
+}
+//zombie shooting game to see if player with ammo, range, and # of zombies can survive"
+function zombie_shootout(zombies, range, ammo) {
+  let killed = 0;
+while (ammo > 0){
+ ammo--;
+ killed++;
+ zombies--;
+ range -= .5;
+ if(zombies == 0){
+   return "You shot all " + killed + " zombies."
+ }else if(range == 0){
+   return "You shot " + killed + " zombies before being eaten: overwhelmed."
+ }else if(ammo == 0){
+   return "You shot " + killed + " zombies before being eaten: ran out of ammo."
+}
+}
 }
