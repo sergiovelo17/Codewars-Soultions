@@ -357,3 +357,7 @@ while (ammo > 0){
 }
 }
 }
+//find largest integer possible given numbers in a current integer
+function superSize(num){
+  return Number(("" + num).split('').sort().reverse().join(''))
+}
