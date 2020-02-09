@@ -372,3 +372,28 @@ function grabscrab(anagram, dictionary) {
   })
   return arr;
 }
+//create an object wallet of least coins necessary to make change
+const makeChange = (amount) => {
+  console.log(amount);
+   let wallet = {};
+   if(amount >= 50){
+     wallet.H = Math.floor(amount/50);
+     amount -= (50 * wallet.H);
+   }
+   if(amount >= 25){
+     wallet.Q = Math.floor(amount/25);
+     amount -= (25 * wallet.Q);
+   }
+   if(amount >= 10){
+     wallet.D = Math.floor(amount/10);
+     amount -= (10 * wallet.D);
+   }
+   if(amount >= 5){
+     wallet.N = Math.floor(amount/5);
+     amount -= (5 * wallet.N);
+   }
+   if(amount > 0){
+     wallet.P = amount;
+    }
+   return wallet;
+  };
