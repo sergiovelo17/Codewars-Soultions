@@ -361,3 +361,14 @@ while (ammo > 0){
 function superSize(num){
   return Number(("" + num).split('').sort().reverse().join(''))
 }
+//figure out possible words a priate may be saying
+function grabscrab(anagram, dictionary) {
+  let arr = [];
+  let ana = anagram.split('').sort().join('');
+  dictionary.forEach((e,i)=>{
+  if(ana == e.split('').sort().join('')){
+    arr.push(e);
+  }
+  })
+  return arr;
+}
