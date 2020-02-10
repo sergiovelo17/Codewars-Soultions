@@ -397,3 +397,19 @@ const makeChange = (amount) => {
     }
    return wallet;
   };
+  
+  //code to create Potion class for hogwarts with fucntion to mix to rgb colors and calvulate volume
+  class Potion {
+    constructor(colors, userVolume){
+      this.color = colors,
+      this.volume = userVolume
+    }
+    mix(otherPotion){
+      let pot = new Potion([0,0,0],0);
+      let vol = otherPotion.volume + this.volume;
+      pot.volume = vol;
+      let arr = [Math.ceil((otherPotion.color[0]*(otherPotion.volume/pot.volume))+(this.color[0]*(this.volume/pot.volume))),Math.ceil((otherPotion.color[1]*(otherPotion.volume/pot.volume))+(this.color[1]*(this.volume/pot.volume))),Math.ceil((otherPotion.color[2]*(otherPotion.volume/pot.volume))+(this.color[2]*(this.volume/pot.volume)))]
+      pot.color = arr;
+      return pot;
+    }
+  }
