@@ -397,7 +397,7 @@ const makeChange = (amount) => {
     }
    return wallet;
   };
-  
+
   //code to create Potion class for hogwarts with fucntion to mix to rgb colors and calvulate volume
   class Potion {
     constructor(colors, userVolume){
@@ -413,3 +413,33 @@ const makeChange = (amount) => {
       return pot;
     }
   }
+  //check which numbers in a given range are backwards-read primes
+  function isPrime(num){
+    for(let i = 2; i <= Math.sqrt(num); i++){
+      if(num%i == 0){
+        return false;
+      }
+    }
+    return true;
+    }
+    
+    function backwardsPrime(start, stop){
+    let obj = {};
+      let primes = [];
+      for(let i = start; i <= stop; i++){
+      let num = Number((""+i).split('').reverse().join(''));
+      if(num==i){
+        continue;
+      }
+      if(i in obj){
+        primes.push(i);
+        continue;
+      }
+        if(isPrime(i) && isPrime(num)){
+          primes.push(i);
+          obj.num = true;
+        }
+      }
+        return primes;
+    }
+    
