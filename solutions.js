@@ -473,3 +473,19 @@ const makeChange = (amount) => {
       }else{
         return "Battle Result: No victor on this battle field"
       }
+    }
+    //return an array that contains the sums of each part of original array
+    function partsSums(ls) {
+      if(ls.length == 0){
+      return [0];
+      }
+      let arr = [];
+      arr.push(ls.reduce((a,b)=>{
+        return a + b;
+      },0))
+      for(let i = 1; i < ls.length; i++){
+        arr.push(arr[i-1]-ls[i-1]);
+      }
+      arr.push(0);
+      return arr;
+  }
