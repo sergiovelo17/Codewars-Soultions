@@ -452,3 +452,24 @@ const makeChange = (amount) => {
         }
       }
     }
+    //Bad vs Good battle (given race power and array of quantity of each)
+    function goodVsEvil(good, evil){
+      let good1 = [1,2,3,3,4,10]
+      let bad1 = [1,2,2,2,3,5,10];
+      let goodScore = 0;
+      let badScore = 0;
+      let goodArr = good.split(' ');
+      let badArr = evil.split(' ');
+      goodArr.forEach((e,i)=>{
+        goodScore += (Number(e) * good1[i]);
+      })
+      badArr.forEach((e,i)=>{
+        badScore += (Number(e) * bad1[i]);
+      })
+      if(goodScore > badScore){
+        return "Battle Result: Good triumphs over Evil"
+      }else if(badScore > goodScore){
+        return "Battle Result: Evil eradicates all trace of Good"
+      }else{
+        return "Battle Result: No victor on this battle field"
+      }
