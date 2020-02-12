@@ -489,3 +489,17 @@ const makeChange = (amount) => {
       arr.push(0);
       return arr;
   }
+  //challenge to see if you will be eaten by a shark
+  function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
+    if(dolphin){
+      sharkSpeed /= 2;
+    }
+    while(sharkDistance > 0){
+      sharkDistance -= sharkSpeed;
+      pontoonDistance -= youSpeed;
+      if(pontoonDistance <= 0 && sharkDistance >0){
+        return "Alive!";
+      }
+    }
+    return "Shark Bait!"
+  }
