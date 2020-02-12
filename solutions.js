@@ -503,3 +503,11 @@ const makeChange = (amount) => {
     }
     return "Shark Bait!"
   }
+  //using regex expressions to find out how many letters or digits are in string
+  function countLettersAndDigits(input) {
+    let arr = input.split('');
+    let lazy = arr.filter((e)=>{
+    return e.match(/[A-Za-z0-9]/);
+    });
+    return lazy.length;
+  }
