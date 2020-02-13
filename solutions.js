@@ -511,3 +511,14 @@ const makeChange = (amount) => {
     });
     return lazy.length;
   }
+  //follow pattern of n , n times
+  function pattern(n){
+    var output="";
+      for(let i = 1; i <= n; i++){
+        for(let j = 0; j < i; j++){
+         output += '' + i;
+        }
+        output += '\n'
+      }
+    return output.substr(0,output.length-1);
+   }
