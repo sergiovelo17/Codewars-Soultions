@@ -531,3 +531,22 @@ const makeChange = (amount) => {
     }
     return null;
   }
+  //figure out if the cat could catch the mouse, given its ability to pounce and presence of a dog
+  function catMouse(x, j){
+    let dog = x.indexOf('D');
+    let cat = x.indexOf('C');
+    let mouse = x.indexOf('m');
+    if(dog == -1 || cat == -1 || mouse == -1){
+      return "boring without all three";
+    }else if(cat < mouse && cat + j >= mouse && dog > cat && dog < mouse){
+      return "Protected!"
+    }else if(cat < mouse && cat + j >= mouse){
+      return "Caught!"
+    }else if(cat > mouse && cat - j <= mouse && dog < cat && dog > mouse){
+      return "Protected!"
+    }else if(cat > mouse && cat - j <= mouse){
+      return "Caught!";
+    }else{
+      return "Escaped!";
+    }
+}
