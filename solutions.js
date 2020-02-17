@@ -522,3 +522,12 @@ const makeChange = (amount) => {
       }
     return output.substr(0,output.length-1);
    }
+   //find the first non-consecutive number in an array
+   function firstNonConsecutive (arr) {
+    for(let i = 0; i < arr.length; i++){
+     if(i > 0 && arr[i]-1 != arr[i-1]){
+        return arr[i];
+      }
+    }
+    return null;
+  }
