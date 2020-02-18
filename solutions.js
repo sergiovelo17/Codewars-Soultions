@@ -554,3 +554,11 @@ const makeChange = (amount) => {
 function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
   return laLigaGoals + copaDelReyGoals + championsLeagueGoals;
  }
+ //find the score from a 18 hole golf session
+ function golfScoreCalculator(parList, scoreList){
+  let total = 0;
+  for(let i = 0; i < parList.length; i++){
+    total += (Number(scoreList.charAt(i))-Number(parList.charAt(i)));
+  }
+  return total;
+}
