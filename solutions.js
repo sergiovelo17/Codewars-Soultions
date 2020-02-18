@@ -550,3 +550,7 @@ const makeChange = (amount) => {
       return "Escaped!";
     }
 }
+//easy challenge to determine Messi's goals in all three leagues
+function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+  return laLigaGoals + copaDelReyGoals + championsLeagueGoals;
+ }
