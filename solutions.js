@@ -579,3 +579,13 @@ function polydivisible(x) {
   }
   return true;
 }
+//find out if a number is narcissistic
+function narcissistic(value) {
+  let total = 0;
+  let num = (""+value);
+  let length = num.length;
+  for(let i = 0; i < length;i++){
+    total += Math.pow(Number(num.charAt(i)),length);
+  }
+  return total == value ? true : false;
+}
