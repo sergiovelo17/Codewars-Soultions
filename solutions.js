@@ -567,3 +567,15 @@ function twoOldestAges(ages){
   let arr = ages.sort((a,b)=>{return a-b});
   return [arr[arr.length-2],arr[arr.length-1]];
 }
+//check if number is polydivisible
+function polydivisible(x) {
+  let n = 1;
+  let strNum = "" + x;
+  for(let i = 0; i < strNum.length; i++){
+    if(Number(strNum.substr(0,i+1))% n != 0){
+      return false;
+    }
+    n++;
+  }
+  return true;
+}
