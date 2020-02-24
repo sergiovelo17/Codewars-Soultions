@@ -630,4 +630,12 @@ var AmIAfraid = function(day, num){
   }
   return false;
 }
-
+//summation
+var summation = function (num) {
+  let total = 0;
+  while(num>0){
+   total+=num;
+   num--;
+ }
+ return total;
+}
