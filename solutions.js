@@ -655,3 +655,13 @@ function solution(str, ending){
   }
   return true;
 }
+//can you go on sabbatical
+function sabb(x, val, happ){
+  let sab = "sabbatical";
+  for(let i = 0; i < x.length; i++){
+    if(sab.includes(x.charAt(i))){
+      val++;
+    }
+  }
+  return val+happ > 22 ? 'Sabbatical! Boom!' : 'Back to your desk, boy.'
+}
