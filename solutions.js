@@ -655,6 +655,7 @@ function solution(str, ending){
   }
   return true;
 }
+//
 //can you go on sabbatical
 function sabb(x, val, happ){
   let sab = "sabbatical";
