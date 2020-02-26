@@ -639,3 +639,8 @@ var summation = function (num) {
  }
  return total;
 }
+//cutting watermelons
+function divide(weight){
+  let num = weight -2;
+  return num % 2 == 0 && num != 0
+}
