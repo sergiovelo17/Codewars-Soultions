@@ -644,3 +644,14 @@ function divide(weight){
   let num = weight -2;
   return num % 2 == 0 && num != 0
 }
+//string ends with?
+function solution(str, ending){
+  let s = ("" + str).split('').reverse()
+  let end = (""+ending).split('').reverse()
+  for(let i = 0; i < end.length; i++){
+    if(end[i] != s[i]){
+      return false;
+    }
+  }
+  return true;
+}
