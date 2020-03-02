@@ -666,3 +666,16 @@ function sabb(x, val, happ){
   }
   return val+happ > 22 ? 'Sabbatical! Boom!' : 'Back to your desk, boy.'
 }
+//weight of array in teams
+function rowWeights(array){
+  let t1 = 0;
+  let t2 = 0;
+  array.forEach((e,i)=>{
+  if(i%2==0){
+    t1+=e;
+  }else{
+    t2+=e;
+    }
+  })
+  return[t1,t2]
+}
