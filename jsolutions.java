@@ -1,3 +1,4 @@
+import java.util.*;
 public class jsolutions
 {
     public static String balancedNum(long number)
@@ -55,5 +56,14 @@ public class jsolutions
               fuelLeft--;
             }
             return false;
+        }
+        public static int minSum(int[] passed)
+        {
+            int min = 0;
+            Arrays.sort(passed);
+            for(int i = 0; i < passed.length; i++){
+              min += (passed[i] * passed[passed.length-1-i]);
+            }
+            return min/2; // Do your magic!
         }
 }
