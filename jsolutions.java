@@ -46,4 +46,14 @@ public class jsolutions
             }
             return "odd";
           }
+          public static boolean zeroFuel(double distanceToPump, double mpg, double fuelLeft) {
+            while(fuelLeft > 0){
+              distanceToPump -= mpg;
+              if(distanceToPump <= 0){
+                return true;
+              }
+              fuelLeft--;
+            }
+            return false;
+        }
 }
