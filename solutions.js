@@ -679,3 +679,8 @@ function rowWeights(array){
   })
   return[t1,t2]
 }
+function noOdds( values ){
+  return values.filter((e,i)=>{
+    return e % 2 == 0
+  })
+}
