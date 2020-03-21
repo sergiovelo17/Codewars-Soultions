@@ -684,3 +684,16 @@ function noOdds( values ){
     return e % 2 == 0
   })
 }
+function differenceInAges(ages){
+  let max = 0;
+  let min = 5000;
+  for(let i = 0; i < ages.length; i++){
+    if(ages[i] > max){
+      max = ages[i];
+    }
+    if(ages[i] < min){
+      min = ages[i];
+    }
+  }
+  return [min,max,max-min]
+}
